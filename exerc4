@@ -1,0 +1,53 @@
+LUCAS DE PAULA E ELEN GABRIELA - TURMA 31
+
+<?php
+
+/*
+Implemente uma classe Veterinario que contenha um método examinar() cujo parâmetro de entrada é um Animal, 
+quando o animal for examinado ele deve emitir um som, passe os 3 animais com parâmetro. 
+*/
+
+class Veterinario {
+    public $cachorro;
+    public $cavalo;
+    public $preguica;
+    
+    public function Examinar(){
+        echo $this->cachorro." está sendo examinado. <br>";
+        echo $this->cachorro." emitiu som! <br><br>";
+        echo $this->cavalo." está sendo examinado. <br>";
+        echo $this->cavalo." emitiu som! <br><br>";
+        echo $this->preguica." está sendo examinada. <br>";
+        echo $this->preguica." emitiu som!";
+    }
+    
+    public function setCachorro($dog){
+        $this->cachorro = $dog;
+    }
+    
+    public function getCachorro(){
+        return $this->cachorro;
+    }
+    
+     public function setCavalo($cav){
+        $this->cavalo = $cav;
+    }
+    
+    public function getCavalo(){
+        return $this->cavalo;
+    }
+    
+     public function setPreguica($pre){
+        $this->preguica = $pre;
+    }
+    
+    public function getPreguica(){
+        return $this->preguica;
+    }
+}
+
+$veterinario = new Veterinario();
+$veterinario->setCachorro("Cachorro");
+$veterinario->setCavalo("Cavalo");
+$veterinario->setPreguica("Preguiça");
+echo $veterinario->Examinar();
