@@ -1,0 +1,67 @@
+LUCAS DE PAULA E ELEN GABRIELA - TURMA 31
+
+<?php
+
+/*
+Nesse exercício, a classe Veiculo, que no caso será a classe pai, abrange um escopo vasto, 
+pois se pensar em um Veículo ter vários tipos diferentes deles, desde uma moto até um ônibus espacial. 
+Agora, utilizando o paradigma de orientação a objetos, é possível ver que qualquer veículo possui uma velocidade 
+e também um dos benefícios do mesmo é possuir um ou mais lugares para carregar pessoas, 
+ou seja, sabendo que todos os veículos, por lei, possuem as características citadas, porém cada um tem a sua especificação própria.
+
+Implemente as classes representadas abaixo, utilizando os conceitos de herança e polimorfismo, 
+e demonstre a sua utilização implementando os 4 objetos ilustrados abaixo:
+*/
+
+class Veiculo {
+    public $modelo;
+    public $velocidade;
+    public $passageiros;
+    public $combustivel;
+}
+
+class Carro extends Veiculo {
+    public $portas;
+    public $ano;
+    
+    public function Andar(){
+        echo "Modelo: ".$this->modelo;
+        echo "Velocidade: ".$this->velocidade;
+        echo "Passageiros: ".$this->passageiros;
+        echo "Combustivel: ".$this->combustivel;
+        echo "Portas: ".$this->portas;
+        echo "Ano: ".$this->ano;
+    }
+}
+
+class Aviao extends Veiculo {
+    public $uso;
+    public $tipo;
+    
+    public function Voar(){
+        echo "Modelo: ".$this->modelo;
+        echo "Velocidade: ".$this->velocidade;
+        echo "Passageiros: ".$this->passageiros;
+        echo "Combustivel: ".$this->combustivel;
+        echo "Uso: ".$this->uso;
+        echo "Tipo: ".$this->tipo;
+    }
+}
+
+$carro = new Carro();
+$carro->modelo="Camaro <br>";
+$carro->velocidade="180km/h <br>";
+$carro->passageiros="5 <br>";
+$carro->combustivel="Gasolina <br>";
+$carro->portas="4 <br>";
+$carro->ano="2019 <br><br>";
+$carro->Andar();
+
+$aviao = new Aviao();
+$aviao->modelo="Airbus <br>";
+$aviao->velocidade="800km/h <br>";
+$aviao->passageiros="150 <br>";
+$aviao->combustivel="Querosene <br>";
+$aviao->uso="Doméstico <br>";
+$aviao->tipo="À jato <br>";
+$aviao->Voar();
