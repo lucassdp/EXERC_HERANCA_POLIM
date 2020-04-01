@@ -1,0 +1,60 @@
+LUCAS DE PAULA E ELEN GABIRELA - TURMA 31
+
+<?php
+
+/*
+Resolva a seguinte situação utilizando os conceitos aprendidos. Crie a classe Imovel, que possui um endereço e um preço. 
+5.1 - crie uma classe Novo, que herda Imovel e possui um adicional no preço. 
+      Crie métodos de acesso e impressão deste valor adicional.
+5.2 - Crie uma classe Velho, que herda Imovel e possui um desconto no preço. 
+      Crie métodos de acesso e impressão para este desconto.
+*/
+
+class Imovel {
+    public $endereco;
+    public $preco;
+    
+    public function setPreco($pre){
+        $this->preco = $pre;
+    }
+    
+    public function getPreco(){
+        return $this->preco;
+    }
+    
+    public function Add($add){
+       
+    }
+    public function Desc($desc){
+        
+    }
+}
+
+class Novo extends Imovel {
+    
+    public function Add($add){
+        $this->preco += $add;
+        echo "<hr>O valor adiconal desse Novo Imovél é: R$".$add;
+    }
+}
+
+class Velho extends Imovel {
+    public function Desc($desc){
+        $this->preco -= $desc;
+        echo "<hr>O valor de desconto desse Velho imovél é: R$".$desc;
+    }
+}
+
+$novo = new Novo();
+$novo->setPreco(50000);
+echo "<hr>Preço do Imóvel: R$".$novo->getPreco();
+echo " / Endereço: Av. Paulista, 1157";
+$novo->Add(20000);
+echo "<hr>Preço do NOVO Imóvel: R$".$novo->getPreco();
+
+$velho = new Velho();
+$velho->setPreco(50000);
+echo "<hr><hr>Preço do Imóvel: R$".$velho->getPreco();
+echo " / Endereço: Av. Beira Mar, 1254";
+$velho->Desc(10000);
+echo "<hr>Preço do VELHO Imóvel: R$".$velho->getPreco();
