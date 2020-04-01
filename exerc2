@@ -1,0 +1,67 @@
+LUCAS DE PAULA E ELEN GABRIELA - TURMA 31
+
+<?php
+
+/*
+Crie uma hierarquia de classes conforme abaixo com os seguintes atributos e comportamentos (observe a tabela), 
+utilize os seus conhecimentos e distribua as características de forma que tudo o que for comum a todos os animais 
+fique na classe Animal:
+*/
+
+class Animal {
+    public $nome;
+    public $idade;
+    
+    public function EmitirSom(){
+        echo "(emitindo som)";
+    }
+}
+
+class Cachorro extends Animal {
+    public function Correr(){
+        echo "Nome: ".$this->nome;
+        echo "Idade: ".$this->idade;
+        echo "(correndo)";
+    }
+}
+
+class Cavalo extends Animal {
+    public function Correr(){
+        echo "Nome: ".$this->nome;
+        echo "Idade: ".$this->idade;
+        echo "(correndo)";
+    }
+}
+
+class Preguica extends Animal {
+    public function SubirÁrvore(){
+        echo "Nome: ".$this->nome;
+        echo "Idade: ".$this->idade;
+        echo "(subindo na árvore)";
+    }
+}
+
+$cachorro = new Cachorro();
+$cachorro->nome="Cachorro <br>";
+$cachorro->idade="8 <br>";
+$cachorro->EmitirSom();
+echo "<br>";
+$cachorro->Correr();
+echo "<br>";
+echo "<br>";
+
+$cavalo = new Cavalo();
+$cavalo->nome="Cavalo <br>";
+$cavalo->idade="10 <br>";
+$cavalo->EmitirSom();
+echo "<br>";
+$cavalo->Correr();
+echo "<br>";
+echo "<br>";
+
+$preguica = new Preguica();
+$preguica->nome="Preguiça <br>";
+$preguica->idade="15 <br>";
+$preguica->EmitirSom();
+echo "<br>";
+$preguica->SubirÁrvore();
