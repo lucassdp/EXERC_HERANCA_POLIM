@@ -1,0 +1,48 @@
+LUCAS DE PAULA E ELEN GABRIELA - TURMA 31
+
+<?php
+
+/*
+Implemente um programa que crie os 3 tipos de animais definidos no exercício anterior 
+e invoque o método que emite o som de cada um de forma polimórfica, isto é, independente do tipo de animal.
+*/
+
+class Animal {
+    public $cachorro;
+    public $cavalo;
+    public $preguica;
+    
+    public function EmitirSom(){
+        echo "O animal emitiu som";
+    }
+}
+
+class Cachorro extends Animal {
+    public function EmitirSom(){
+        echo $this->cachorro."AU AU AU AU <br>";
+    }
+}
+
+class Cavalo extends Animal {
+    public function EmitirSom(){
+        echo $this->cavalo."IRRRIIINN <br>";
+    }
+}
+
+class Preguica extends Animal {
+    public function EmitirSom(){
+        echo $this->preguica."AHHHHHZZZZ";
+    }
+}
+
+$animal = new Cachorro();
+$animal->cachorro="Cachorro ";
+$animal->EmitirSom();
+
+$animal = new Cavalo();
+$animal->cavalo="Cavalo ";
+$animal->EmitirSom();
+
+$animal = new Preguica();
+$animal->preguica="Preguiça ";
+$animal->EmitirSom();
